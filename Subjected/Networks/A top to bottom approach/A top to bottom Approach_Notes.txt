@@ -1,0 +1,26 @@
+******* Two most prominent types of packet switches in today’s Internet are routers and link-layer switches.30pdf****** 
+
+
+******* End systems access the Internet through Internet Service Providers (ISPs), including residential ISPs such as local cable or telephone companies.30pdf*******
+
+
+******* Each ISP network runs the IP protocol (see below), and conforms to certain naming and address conventions.30-31pdf*******
+
+*******  The Transmission Control Protocol (TCP) and the Internet Protocol (IP) are two of the most important protocols in the Internet.31pdf *******
+
+*******  Internet standards are developed by the Internet Engineering Task Force (IETF) [IETF 2016]. 31*******
+
+
+*******The IETF standards documents are called requests for comments (RFCs). RFCs tend to be quite technical and detailed. They define protocols such as TCP, IP, HTTP (for the Web), and SMTP (for e-mail). 31pdf *******
+
+******* HOW WEBSITES ARE LOADED IN BROWSER:
+
+First by entering the URL of a webpage a Request is sent to the web server meaning the computer will send a connection request message to the web server and wait for reply.After getting the right reply it realizes its OKAY to request the web document and the name of the web page it wants to fetch from the Web Server is  sent in a GET message. Finally the webserver returns the webpage(FILE) to our computer.34pdf********
+
+
+******* We refer to computer like devices on Internet as END systems/hosts in this book. They are referred to as end systems
+because they sit at the edge of the Internet.36pdf*******
+
+
+******* Today, the two most prevalent types of broadband residential access are digital subscriber line (DSL) and cable.40
+*******

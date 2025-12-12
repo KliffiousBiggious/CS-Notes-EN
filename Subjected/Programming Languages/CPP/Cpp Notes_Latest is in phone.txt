@@ -1,0 +1,15 @@
+صفحه ۸۸.
+		
+******* Since the pointers point to addresses we can type cast the pointers. It is worth mentioning tho that it can cause issues when dereferencing if the cast is unsafe.89*******
+
+
+۹۵.
+
+		
+*******In C++ p[t] is basically  equal to *(p+t).94*******
+
+******* When compiler comes across  a string literal, it saves it in a string table and considers a pointer to the beginning of it. 95*******
+
+********Attempting to print a character pointer (NOT DEREFERENCED) will print the entire string without null by default.99*******
+
+********

@@ -1,5 +1,0 @@
-******* DHCP is used to give IPs to devices automatically.*******
-
-******* IPV4 standard for IPAddresses is 32 bits, 4 sections, each a byte of range, number from 0 to 255. The least significant byte if set 0 means Network address and if 255 means broadcast . Basically the two cant be addresses.*******
-
-******* The classes of IP define how many of 32 bits repreasant the Network ID and host ID. Sensibly the smaller network ID means the greater the number of bits left to repreasant the host ID.*******

@@ -1,0 +1,27 @@
+Open GL Pipeline: A vertex/Line/Triangle 's journey from 3D data to your 2D screen
+E4
+
+Vertex specification: Where we setup on the CPU or geometry E4
+
+Shader: A programmable part of our pipeline (Feature of modern OpenGL that we can run programs on GPU to control the graphics pipeline) E4
+
+Vertex Shader: Execute on each vertex, positioning that vertex as a result
+E4
+
+Tessellation (Optional) : When we add more triangles by dividing the current ones in order to get more detail
+E4
+
+Geometry Shader (Optional) : Generate more geometry out of a point (Like in the explosion) E4
+
+Vertex Post- Processing: When
+
+
+
+Primitive Assembly: How are we assembling all the primitives (Are they points, lines , etc) Assembling the final geometry that's within view
+E4
+
+Rasterization: Filling boxes (pixels) to make a shape E4
+
+Fragment Shader : Executing once on each fragment pixel. Determine the final color of each pixel E4
+
+Per Sample Operations:

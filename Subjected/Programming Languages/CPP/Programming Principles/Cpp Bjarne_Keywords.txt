@@ -1,0 +1,24 @@
+cin: refers to the standard input stream (pronounced “see-in,” for “character input”) defined in the standard library.61
+
+>>: operator (“get from”) specifies where that input goes. 61
+
+constexpr: Used to define a symbolic constant that is immediately innitialized.96
+
+const: To handle cases where the value of a “variable” that is initialized with a value that is not known at compile time but never changes after initialization, C++ offers this second form of constant.97
+
+type{value}: Means “convert value to type as if you were initializing a variable of type type with the value value.” 99
+
+
+vector <datatype>  identifier(optional size):
+Used for vector definitions. Notice that the optional size can be a variable.119
+
+  vectorname.size(): returns  the size of a
+  vector.119
+
+  vectorname.push_back(): Another
+ method of the vector class that adds element at the back of a the object.120 
+
+classname_name::member_name:
+Used to define a method outside of a class.212
+ 
+246

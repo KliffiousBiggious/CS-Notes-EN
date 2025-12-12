@@ -1,0 +1,3 @@
+Specify geometry data using coordinate system project it on 2D coordinate system based on monitor.
+Position geometry in a program called vertex shader and then we optionally might modify that geometry in two steps by tesselating it or using geometry shader tp create even more geometry after that, then we do post  processing that modifies data and then we finally assemble primitives.Then we rasterize and control the coloring through fragment shader 
+Our data in Open GL has tp go through pipeline. Whatever we do E4

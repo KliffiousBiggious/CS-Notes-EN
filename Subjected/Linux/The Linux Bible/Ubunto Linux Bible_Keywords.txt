@@ -1,0 +1,8 @@
+Files: Basically collections of data.106
+Directories: Are containers acting as collections of files.They could contain other directories which would be called sub-directories.106
+Root: The directory that all searches start from in Linux.106
+Path: A series of directories leading to a file.106
+cd DirName/Dirname: Is used to go to a directory.(SELF LEARNED:
+cd IS ONLY FOR DIRECTORIES, IT DOES NOT OPEN THE ACTUAL FILES!!!!!).106-107
+
+

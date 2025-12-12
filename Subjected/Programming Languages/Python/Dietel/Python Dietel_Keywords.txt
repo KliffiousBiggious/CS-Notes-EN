@@ -1,0 +1,13 @@
+ipython: Typed in Python commandline to enter the Interactive  mode.21
+
+? : You can always use ? to get help when in interactive mode.21
+
+exit: Used to quit the interactive mode.22
+
+ctrl + d : Used to quit the interactive mode but askss for assurance. Default Response would be yes,type it twice on mac and linux.22
+
+type(variable nameORvalue): Used to print out the type of variable.51
+
+print("a","r","r"): Basically printf with the difference that normally it automatically prints all (except) the first argument preceded by a space.56
+
+input("Message"): Used to take input from a user.59

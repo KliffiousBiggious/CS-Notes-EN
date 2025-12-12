@@ -1,0 +1,8 @@
+******* Python has two modes :
+1- Interactive in which you feed snippets  of code and immediately see the results.
+2 - Script  un which you'll execute codes loaded from a file that has the .py extension.21 *******
+
+******* Python is case sensitive.51*******
+
+
+21

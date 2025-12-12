@@ -1,0 +1,22 @@
+******* To access an object we need a name, a named objcet is called a variable and has a speific type that determines what we an put into the object a name object is a variable and has a specific type.63 *******
+******* by convention,reading of strings is terminated by what is called whitespace, that is, space, newline, and tab characters.64*******
+******* Function declaration explanation.117*******
+
+*******  The notations type(value) and type{value} mean “convert value to type as if you were initializing a variable of type
+type with the value value.” The type{value} notation prevents narrowing (§3.9.2), but the type(value) notation does not. 99 *******
+
+******* Vector can have a variable as size which is sth we can't do in arrays.118*******
+
+*****************When we define a member of a class outside the class definition itself, we  have to mention which class we mean the
+member to be a member of. We use the notation class_name :: member_name for
+that. In this case, we define
+Token_stream’s member putback.212
+*************
+
+*******Private functions can only be accessed by other functions within the class.********
+
+264
+
+
+******* header is a collection of declarations, typically defined in a file, so a header is also called a header file. Such headers are then #included in our source files. 264*******
+277

@@ -1,7 +1,0 @@
-MAR: Memory address reguster The address in memory where for next read or write. 31
-
-MBR: Memort Buffer Register The data to be written into memory or reas from memory.31
-
-I/OAR: Specifies the I/O.31
-
-I/OBR: Exchange of data between processor and I/O module. 31

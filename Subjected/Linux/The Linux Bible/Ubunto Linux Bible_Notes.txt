@@ -1,0 +1,6 @@
+******* The directory that all searches start with on Linux is the root directory.106 *******
+
+
+
+
+
