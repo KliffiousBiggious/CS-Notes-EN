@@ -1,11 +1,21 @@
 ******* To learn Visual Basic, you might want to consult some other Microsoft Press books, such asLearn Visual Basic Now (1996), by Michael Halvorson.7 *******
-
 ******* Jeff Prosise's Programming Windows with MFC, Second Edition (Microsoft Press, 1999) provides tutorials on MFC. 7*******
-
 ******* A good Microsoft
 Press book on Microsoft J++, Microsoft's Java development tool, is Programming Visual J++ 6.0 (1998), by Stephen R. Davis.7 *******
+******* Structurally, HELLOMSG.C is identical to the K&R "hello, world" program. The header file STDIO.H  has been replaced with WINDOWS.H, the entry point 
+main has been replaced with WinMain, and the C run?time library function printf has been replaced with the Windows API function MessageBox. However, there is much in the program that is new, including several strange?looking uppercase identifiers.10 *******
+******* winMain is the Entry for Windows apps.11******* 
 
-******* Structurally, HELLOMSG.C is identical to the K&R "hello, world" program. The header file STDIO.H  has been replaced with WINDOWS.H, the entry point main has been replaced with WinMain, and the C run−time library function printf has been replaced with the Windows API function MessageBox. However, there is much in the program that is new, including several strange−looking uppercase identifiers.10 *******
+******* prefix I stands for integer while sz stands for string terminated with zero.11*******
+
+******* First parameter to WinMain (hInstance here) is an instance handle. In this case, the handle uniquely identifies the program. It is required as an argument to some other Windows function calls.11 *******
+
+******* In early versions of Windows, a program could determine if other instances of itself were running by checking the second parameter (hPrevInstance here). It could then skip certain chores and move some data from the previous instance into its own data area. In the 32?bit versions of Windows, this concept has been abandoned. The second parameter to WinMain is always NULL (defined as 0). The third parameter (szCmdLine here) to WinMain is the command line used to run the program. Some Windows applications use this to load a file into memory when the program is started. The fourth parameter (iShowCmd here) indicates how the program should be initially displayed either normally or maximized to fill the window, or minimized to be displayed in the task list bar.11-12*******
+
+*******The MessageBox function is designed to display short messages. The little window that MessageBox displays is actually considered to be a dialog box, although not one with a lot of versatility.12*******
+
+******* Each of the text string args of MessageBox is enclosed in a TEXT macro cuz it's a good idea if you want to be ready to convert your programs to the Unicode character set.12 *******
+
+******* You can use the C OR (|) operator to combine one of the button constants with one of the constants that indicates which of the buttons is the default.12 *******
 
 
-******* Win

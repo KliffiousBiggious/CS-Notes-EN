@@ -1,0 +1,214 @@
+******* Classes cannot execute by themselves. A Person object can drive a Car object by telling it what to do (go faster, go slower, turn left, turn right, etc.)—without knowing how the car’s internal mechanisms work. Similarly, the main function can “drive” an Account object by calling its member functions—without knowing how the class is implemented. In this sense, main is referred to as a driver program. We show the main program and its output first, so you can see an Account object in action. To help you prepare for the larger programs you’ll encounter later in this book and in industry, we define main in its own file (file AccountTest.cpp, Fig. 3.1). We define class Account in its own file as well.115*******
+
+
+
+******* Typically, you cannot call a member function of a class until you create an object of that class.115*******
+
+******* It’s customary to place a reusable class definition in a file known as a header with a .h filename extension.
+You include (via #include) that header wherever you need to use the class. For example, you can reuse the C++ Standard Library’s classes in any program by including the appropriate headers.a header that you define in your program is placed in double quotes (""), rather than the angle brackets (<>) used for C++ Standard Library headers like . The double quotes in this example tell the compiler that header is in the same folder as Fig. 3.1, rather than with the C++ Standard Library headers.  Files ending with the .cpp filename extension are source-code files. These define a program’s main function, other functions and more, as you’ll see in later chapters. You include headers into source-code files (as in Fig. 3.1), though you also may include them in other headers. 116*******
+
+******* When reading a string, cin stops at the first white-space character (such as a space, tab or newline).Function getline reads from the standard input stream object cin the characters the user enters, up to, but not including, the newline, which is discarded; getline places the characters in the string variable theName. 117 *******
+
+******* Every class definition contains the keyword class followed immediately by the class’sname.119*******
+
+************ For subtle reasons that we explain in Section 23.4, headers should not contain using directives or using declarations.120*******
+
+******* Declaring a member function with const to the right of the parameter list tells the compiler, “this function should not modify the object on which it’s called—if it does, please issue a compilation error.” This can help you locate errors if you accidentally insert in the member function code that would modify the object.122*******
+
+******* They can be used by other functions in the program (such as main), and by member functions of other classes (if there are any). In Chapter 11, we’ll introduce the protected access specifier.123*******
+
+
+******* By default everything in class is private,unless you specify otherwise.*******
+
+
+******* We prefer to list public only once, grouping everything that’s public, and we prefer to list private only once, grouping everything that’s private. The access specifiers public and private may be repeated, but this is unnecessary and can be confusing. 123*******
+
+
+******* UML.123,124,147*******
+
+******** Constructor specifies the custom initialization for the objects of a class. A constructor must have the same name as the class.124 *******
+
+******** We use curly braces to initialize a classes constructor argument.126********
+
+******** The default constructor does not initialize the class’s fundamental-type data members, but does call the default constructor for each data member that’s an object of anotherclass. 128********
+
+
+******** In UML the diamond symbol is for decisions. The rounded rectangles for action states.147*******
+
+
+******* We use the diamiond symbol as the merge symbol as well which just joins transitions from the initial state and action state.150 *******
+
+
+******* Not providing in the body of a while statement an action that eventually causes the condition in the while to become false results in a logic error called an infinite loop (the loop never terminates).158*******
+
+144
+
+******** By adding string literals we can concatanate them.
+218*******
+
+******* Enum class allows overloading of the constants(If there are other Enum constants with the same name since we HAVE to use them from the object of the class they will be treated as extinct) Also in Enum class the enums can not be used as the type int but as the type classname. In C enum's scope is based on where they're defined,just like structs.It's the same in C++ typedefs, all pretty much follow the scope rules self learned.258********
+
+*******. If more function calls occur than can have their activation records stored on the function-call stack, a fatal error known as stack overflow occurs.278 *******
+
+
+
+******** A reference can be thought of as a constant pointer with automatic indirection, with automatic indirection.SELF LEARNED********
+
+*******Just like how parameters of a function can normally be const, the references can be like that as well.285*******
+
+******** Functions can have default arguments for when some of the arguments have not been initialized.285-286
+*******
+******************SELF LEARNED Default initialization SHOULD HAPPEN IN DECLARATION*********************
+
+******** For functions to be overloaded the number of parameters OR their types have to be different and having default arguments or return types alone DON'T cause overloading.286*******
+
+********An exception indicates a problem that occurs while a program executes. The name “exception” suggests that the problem occurs infrequently. Exception handling enables you to create fault-tolerant programs that can process (or handle) exceptions. In many cases, thisallows a program to continue executing as if no problems were encountered.When a function detects a problem, such as an invalid array subscript or an invalid argument, it throws an exception—that is, an exception occurs. Here we introduce exception handling briefly.362 *******
+
+****** The try block contains the code that might throw an exception, and the catch block contains the code that handles the exception if one occurs.362
+
+---------------------------------------------------------------------
+
+
+
+*******
+Client code can access a class’s public members via • the name of an object and the dot operator (.)• a reference to an object and the dot operator (.)• a pointer to an object and the arrow operator (->).427*******
+
+
+******* 
+#ifndef NAME 
+                           #define NAME 
+#endif
+checks if the name is not defined if not so the rest of it will be defined.430*******
+
+******* Defining methods in class forces compiler to implicitly inline them.433*******
+
+******* Constructors can have default arguments. Constructors with default arguments must be defined explicit.439*******
+
+
+
+******* Utility functions (also called a helper function) are  private member functions that support the operation of a class’s other member functions. Utility functions are declared private because they’re not intended for use by the class’s clients. A popular use of a utility function would be to place in a function some common code that would otherwise be duplicated in several other member functions.439*******
+
+
+********** Constructors that can be called by one argument(those with default arguments) should be declared explicit.439*******
+
+******* Having constructors use set and get accessors for initialization eases the management of code.444*******
+
+*******Constructurs can be defined with default arguments or divided to other functions that are overloaded for different arguments.444-445*******
+
+******* A classes destructor is called implicitly when an object is destroyed. for example, as an object is destroyed when program execution leaves the scope in which that object was instantiated.
+The destructor itself does not actually release the object’s memory—it performs termination housekeeping3 before the object’s memory is reclaimed, so the memory may be reused to hold new objects. 445*******
+ 
+*******A destructor may not specify parameters or a return type.445*******
+
+******* function exit and abort abd more talks about the order of execution of constructors and destructors.446*******
+
+*******SELF LEARNED A method's declaration does not contain the initializer list but only the bare minimum(the return type name and parameter types)447*******
+
+******* The execution of destructors works according to the static ness and globalness of the object.446*******
+
+******** SELF LEARNED IF ARGUMENT IS OF REFERENCE TYPE, IT CANNOT BE OPTIONAL.*********
+
+
+******* SELF LEARNED: The destructors should not have arguments/parameters*******
+
+******* Objects may be passed as function arguments in which case they'll be called by value.453*******
+
+******* When a class object is passed by value a copy constructor will be called which will put the original obj's values in the copy object for function.453*******
+
+******* C++ disallows member-function calls for const objects unless the member functions themselves are also declared const. This is true even for get member functions that do not modify the object. This is also a key reason that we’ve declared as const all member functions that do not modify the objects on which they’re called.454*******
+
+******* The “constness” of a const object is enforced from the time the constructor completes initialization of the object until that object’s destructor is called.454*******
+
+******* Composition/aggregation is when we use an object of a class within another one.455*******
+
+*******SELF LEARNED In C++ we can innitialize multiple vars by writing the type and constness at left followed by identifiers and their values separated by commas.*************
+
+*******SELF LEARNED members of a class CAN be defined const but if done so they MUST be initialized.***********
+
+
+
+
+******Not initializing classes that don't have constructors with default arguments/classes without default constructors;results in compilation error.461*******
+
+
+*******It’s possible to specify overloaded functions as friends of a class. Each function intended to be a friend must be explicitly declared in the class definition as a friend of the class.463
+*******
+******* Even though the prototypes for friend functions appear in the class definition, friends are not member functions.463*******
+
+******* Member access notions of private, protected and public are not relevant to friend declarations, so friend declarations can be placed anywhere in a class definition.463*******
+
+******* A this pointer is passed implicitly to each object of the class's non static member functions.463*******
+******* this pointer is usually used to avoid colisions between instance variable and member function parameters with same names.643*******
+
+
+*******In certain cases, only one copy of a variable should be shared by all objects of a class. A static data member is used for these and other reasons. Such a variable represents “classwide” information, i.e., data that is shared by all instances and is not specific to any one object of the class.469*******
+
+******* SELF LEARNED: const instance variables are either initialized by default OR by constructor WITHIN the initializer list.(THEY CANNOT BE INITIALIZED IN CONSTRUCTOR BODY!!!!)*******
+
+******* SELF LEARNED: A const data member still has the opportunity to be changed (""Initialized ""LOL) until the body of the constructor.*******
+
+
+************ Cascaded function calls allow for multiple  member functions to be called right after each other without the use of scope/class resolution by using the the *this pointer as  their return type.
+ex:
+instead of 
+std.h(1); std.he(2);
+we could write
+std.h(1).he(2).hel(3);
+provided the functions return a this pointer.468***************
+
+******* A class’s static data members have class scope. A static data member must be initialized exactly once. Fundamental-type static data members are initialized by default to 0. Prior to C++11, a static const data member of int or enum type could be initialized in its declaration in the class definition—all other static const data members had to be defined and intialized at global namespace scope (i.e., outside the body of the class definition). In C++11, all static const data members can have in-class initializers. If a static data member is an object of a class that provides a default constructor, the static data member need not be initialized because its default constructor will be called. 469-470*******
+
+******* Static data members can have their own default constructor.(If no constructor for the class if defined).470*******
+
+
+
+******* A class’s private  (and protected; Chapter 11)  static members are normally accessed through the class’s public member functions or friends. A class’s static members exist even when no objects of that class exist. To access a public static class member when no objects of the class exist, simply prefix the class name and the scope resolution operator (::) to the name of the data member.470*******
+
+
+
+******* To access a private or protected static class member when no objects of the class exist, provide a public static member function and call the function by prefixing its name with the class name and scope resolution operator.470*******
+
+******* A static member function is a service of the class, not of a specific object of the class.470******
+
+******* A class’s static data members and static member functions exist and can be used even if no objects of that class have been instantiated.470*******
+
+
+*******Private members of a base class tho inherited, cannot be directly accessed through a derived class.541*******
+
+******* With PUBLIC INHERITENCE all members of the class retain their original member access during the inheritance.541*******
+
+*******SELF LEARNED Default initialization of parameters happens only once within the class declaration.552*******
+
+
+************** The constness of function must be declared in declaration AND definition (the explicit keyword need ONLY exist in the declaration tho).553*******
+
+
+************ For derived classs with a constructor having base class, we SHOULD delegate the constructor to that of the base class.554************
+
+*******SELF LEARNED const instances of class won't give error until we use methods of them that try to access the instance variables.*******
+
+*******SELF LEARNED Composition over inheritance means using an object of a class within another class is preferred to using inheritance as in inheritance changes in the super class could require changes in subclasses while in composition it's not the case.********
+
+
+******* SELF LEARNED: TEMPLATE STRING ARRAYS ARE TOTALLY DIFFERENT FROM TEMPLATE CHARACTERS*******
+
+
+
+******* SELF LEARNED:A class with const members has its default  consturctor deleted(MEANING NORMALLY YOU SHOULD DEFINE A CONSTRUCTOR THAT INITIALIZES THEM) ******* RULE 1
+(NORMALLY MEANS IF IT's normal instatiation of it in a global function scope)
+
+******** SELF LEARNED VEEERY IMPORTANT: IN COMPOSITION THE CLASSES FROM WHICH OBJECTS ARE BEING MADE OF SHOULD NOT HAVE A CUSTOM CONSTRUCTOR BUT A DEFAULT  CONSTRUCTOR*******
+RULE 2
+
+*******SELF LEARNED F
+ROM RULE 1 and RULE 2 we understand that it's impossible to perform composition with a class that has a const member.******* NO MORE VALID
+
+***********SELF LEARNED Consequently, the const composed objs of a class need be initialized thru the constructor of the class containing them************ 
+
+******* SELF LEARNED const objects need not have all their members "initialized" unlike the common belief, but rather need a constructor that is defined by the user.There is NO checking for parameters*******
+
+******* SELF LEARNED(KINDA) A memeber function can use another member function of the same class in its definition without the use of scope resolution operator.441*******
+
+******* Referencing preprocessor macro within macro*******
+
+******************SELF LEARNED A friend function needs be declared once again (ASIDE FROM THE FRIEND DECLARATION) before it's usage elsewhere.******************

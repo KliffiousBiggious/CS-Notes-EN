@@ -1,1 +1,32 @@
-WINAPI: is a calling convention involving how machine code is generated to place function call args on stack. Most winAPI functions are called by it.
+WINAPI: is a calling convention involving how machine code is generated to place function call args on stack. Most winAPI functions are called by it.11
+
+winMain: The name of the entry function.11
+
+LPSTR/PSTR: Pointer to character string.11
+
+hInstance: The parameter is used to save the instance handle.11
+
+hPrevInstance: Used by  app to check if instances of self were running.11
+
+MessageBox: Displays a message box with not much versatility. The first argument to it is normally a window handle. The second argument is the text string that appears in the body of the message box, and the third argument is the text string that appears in the caption bar of the message box. The fourth argument to MessageBox can be a combination of constants beginning with the prefix MB_ that are defined in WINUSER.H .12
+
+MB_OK 0x00000000L 
+MB_OKCANCEL 0x00000001L  MB_ABORTRETRYIGNORE 0x00000002L MB_YESNOCANCEL 0x00000003L 
+MB_YESNO 0x00000004L
+MB_RETRYCANCEL 0x00000005L:
+Constants for buttons.12
+
+MB_DEFBUTTON1 0x00000000L MB_DEFBUTTON2 0x00000100L MB_DEFBUTTON3 0x00000200L MB_DEFBUTTON4 0x00000300L:
+Constants for defining the default button from left.12
+
+MB_ICONHAND 0x00000010L
+MB_ICONQUESTION 0x00000020L MB_ICONEXCLAMATION 0x00000030L
+MB_ICONASTERISK 0x00000040L: Alternative constants for defining the default button from left.12
+Constants for defining the icon of MessageBox.12
+
+
+
+MB_ICONWARNING 
+MB_ICONERROR 
+MB_ICONINFORMATION 
+MB_ICONSTOP : Alternative constants for icons.12

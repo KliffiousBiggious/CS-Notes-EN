@@ -1,27 +1,29 @@
-******* Classes cannot execute by themselves. A Person object can drive a Car object by telling it what to do (go faster, go slower, turn left, turn right, etc.)‚Äîwithout knowing how the car‚Äôs internal mechanisms work. Similarly, the main function can ‚Äúdrive‚Äù an Account object by calling its member functions‚Äîwithout knowing how the class is implemented. In this sense, main is referred to as a driver program. We show the main program and its output first, so you can see an Account object in action. To help you prepare for the larger programs you‚Äôll encounter later in this book and in industry, we define main in its own file (file AccountTest.cpp, Fig. 3.1). We define class Account in its own file as well.115*******
+
+******* Classes cannot execute by themselves. A Person object can drive a Car object by telling it what to do (go faster, go slower, turn left, turn right, etc.)ówithout knowing how the carís internal mechanisms work. Similarly, the main function can ìdriveî an Account object by calling its member functionsówithout knowing how the class is implemented. In this sense, main is referred to as a driver program. We show the main program and its output first, so you can see an Account object in action. To help you prepare for the larger programs youíll encounter later in this book and in industry, we define main in its own file (file AccountTest.cpp, Fig. 3.1). We define class Account in its own file as well.115*******
 
 
 
 ******* Typically, you cannot call a member function of a class until you create an object of that class.115*******
 
-******* It‚Äôs customary to place a reusable class definition in a file known as a header with a .h filename extension.
-You include (via #include) that header wherever you need to use the class. For example, you can reuse the C++ Standard Library‚Äôs classes in any program by including the appropriate headers.a header that you define in your program is placed in double quotes (""), rather than the angle brackets (<>) used for C++ Standard Library headers like . The double quotes in this example tell the compiler that header is in the same folder as Fig. 3.1, rather than with the C++ Standard Library headers.  Files ending with the .cpp filename extension are source-code files. These define a program‚Äôs main function, other functions and more, as you‚Äôll see in later chapters. You include headers into source-code files (as in Fig. 3.1), though you also may include them in other headers. 116*******
+******* Itís customary to place a reusable class definition in a file known as a header with a .h filename extension.
+You include (via #include) that header wherever you need to use the class. For example, you can reuse the C++ Standard Libraryís classes in any program by including the appropriate headers.a header that you define in your program is placed in double quotes (""), rather than the angle brackets (<>) used for C++ Standard Library headers like . The double quotes in this example tell the compiler that header is in the same folder as Fig. 3.1, rather than with the C++ Standard Library headers.  Files ending with the .cpp filename extension are source-code files. These define a programís main function, other functions and more, as youíll see in later chapters. You include headers into source-code files (as in Fig. 3.1), though you also may include them in other headers. 116*******
 
 ******* When reading a string, cin stops at the first white-space character (such as a space, tab or newline).Function getline reads from the standard input stream object cin the characters the user enters, up to, but not including, the newline, which is discarded; getline places the characters in the string variable theName. 117 *******
 
-******* Every class definition contains the keyword class followed immediately by the class‚Äôsname.119*******
+******* Every class definition contains the keyword class followed immediately by the classís
+name.119*******
 
 ************ For subtle reasons that we explain in Section 23.4, headers should not contain using directives or using declarations.120*******
 
-******* Declaring a member function with const to the right of the parameter list tells the compiler, ‚Äúthis function should not modify the object on which it‚Äôs called‚Äîif it does, please issue a compilation error.‚Äù This can help you locate errors if you accidentally insert in the member function code that would modify the object.122*******
+******* Declaring a member function with const to the right of the parameter list tells the compiler, ìthis function should not modify the object on which itís calledóif it does, please issue a compilation error.î This can help you locate errors if you accidentally insert in the member function code that would modify the object.122*******
 
-******* They can be used by other functions in the program (such as main), and by member functions of other classes (if there are any). In Chapter 11, we‚Äôll introduce the protected access specifier.123*******
+******* They can be used by other functions in the program (such as main), and by member functions of other classes (if there are any). In Chapter 11, weíll introduce the protected access specifier.123*******
 
 
 ******* By default everything in class is private,unless you specify otherwise.*******
 
 
-******* We prefer to list public only once, grouping everything that‚Äôs public, and we prefer to list private only once, grouping everything that‚Äôs private. The access specifiers public and private may be repeated, but this is unnecessary and can be confusing. 123*******
+******* We prefer to list public only once, grouping everything thatís public, and we prefer to list private only once, grouping everything thatís private. The access specifiers public and private may be repeated, but this is unnecessary and can be confusing. 123*******
 
 
 ******* UML.123,124,147*******
@@ -30,7 +32,8 @@ You include (via #include) that header wherever you need to use the class. For e
 
 ******** We use curly braces to initialize a classes constructor argument.126********
 
-******** The default constructor does not initialize the class‚Äôs fundamental-type data members, but does call the default constructor for each data member that‚Äôs an object of anotherclass. 128********
+******** The default constructor does not initialize the classís fundamental-type data members, but does call the default constructor for each data member thatís an object of another
+class. 128********
 
 
 ******** In UML the diamond symbol is for decisions. The rounded rectangles for action states.147*******
@@ -62,7 +65,8 @@ You include (via #include) that header wherever you need to use the class. For e
 
 ******** For functions to be overloaded the number of parameters OR their types have to be different and having default arguments or return types alone DON'T cause overloading.286*******
 
-********An exception indicates a problem that occurs while a program executes. The name ‚Äúexception‚Äù suggests that the problem occurs infrequently. Exception handling enables you to create fault-tolerant programs that can process (or handle) exceptions. In many cases, thisallows a program to continue executing as if no problems were encountered.When a function detects a problem, such as an invalid array subscript or an invalid argument, it throws an exception‚Äîthat is, an exception occurs. Here we introduce exception handling briefly.362 *******
+********An exception indicates a problem that occurs while a program executes. The name ìexceptionî suggests that the problem occurs infrequently. Exception handling enables you to create fault-tolerant programs that can process (or handle) exceptions. In many cases, this
+allows a program to continue executing as if no problems were encountered.When a function detects a problem, such as an invalid array subscript or an invalid argument, it throws an exceptionóthat is, an exception occurs. Here we introduce exception handling briefly.362 *******
 
 ****** The try block contains the code that might throw an exception, and the catch block contains the code that handles the exception if one occurs.362
 
@@ -71,7 +75,10 @@ You include (via #include) that header wherever you need to use the class. For e
 
 
 *******
-Client code can access a class‚Äôs public members via ‚Ä¢ the name of an object and the dot operator (.)‚Ä¢ a reference to an object and the dot operator (.)‚Ä¢ a pointer to an object and the arrow operator (->).427*******
+Client code can access a classís public members via 
+ï the name of an object and the dot operator (.)
+ï a reference to an object and the dot operator (.)
+ï a pointer to an object and the arrow operator (->).427*******
 
 
 ******* 
@@ -86,7 +93,7 @@ checks if the name is not defined if not so the rest of it will be defined.430**
 
 
 
-******* Utility functions (also called a helper function) are  private member functions that support the operation of a class‚Äôs other member functions. Utility functions are declared private because they‚Äôre not intended for use by the class‚Äôs clients. A popular use of a utility function would be to place in a function some common code that would otherwise be duplicated in several other member functions.439*******
+******* Utility functions (also called a helper function) are  private member functions that support the operation of a classís other member functions. Utility functions are declared private because theyíre not intended for use by the classís clients. A popular use of a utility function would be to place in a function some common code that would otherwise be duplicated in several other member functions.439*******
 
 
 ********** Constructors that can be called by one argument(those with default arguments) should be declared explicit.439*******
@@ -96,7 +103,7 @@ checks if the name is not defined if not so the rest of it will be defined.430**
 *******Constructurs can be defined with default arguments or divided to other functions that are overloaded for different arguments.444-445*******
 
 ******* A classes destructor is called implicitly when an object is destroyed. for example, as an object is destroyed when program execution leaves the scope in which that object was instantiated.
-The destructor itself does not actually release the object‚Äôs memory‚Äîit performs termination housekeeping3 before the object‚Äôs memory is reclaimed, so the memory may be reused to hold new objects. 445*******
+The destructor itself does not actually release the objectís memoryóit performs termination housekeeping3 before the objectís memory is reclaimed, so the memory may be reused to hold new objects. 445*******
  
 *******A destructor may not specify parameters or a return type.445*******
 
@@ -115,9 +122,9 @@ The destructor itself does not actually release the object‚Äôs memory‚Äîit perfo
 
 ******* When a class object is passed by value a copy constructor will be called which will put the original obj's values in the copy object for function.453*******
 
-******* C++ disallows member-function calls for const objects unless the member functions themselves are also declared const. This is true even for get member functions that do not modify the object. This is also a key reason that we‚Äôve declared as const all member functions that do not modify the objects on which they‚Äôre called.454*******
+******* C++ disallows member-function calls for const objects unless the member functions themselves are also declared const. This is true even for get member functions that do not modify the object. This is also a key reason that weíve declared as const all member functions that do not modify the objects on which theyíre called.454*******
 
-******* The ‚Äúconstness‚Äù of a const object is enforced from the time the constructor completes initialization of the object until that object‚Äôs destructor is called.454*******
+******* The ìconstnessî of a const object is enforced from the time the constructor completes initialization of the object until that objectís destructor is called.454*******
 
 ******* Composition/aggregation is when we use an object of a class within another one.455*******
 
@@ -131,7 +138,7 @@ The destructor itself does not actually release the object‚Äôs memory‚Äîit perfo
 ******Not initializing classes that don't have constructors with default arguments/classes without default constructors;results in compilation error.461*******
 
 
-*******It‚Äôs possible to specify overloaded functions as friends of a class. Each function intended to be a friend must be explicitly declared in the class definition as a friend of the class.463
+*******Itís possible to specify overloaded functions as friends of a class. Each function intended to be a friend must be explicitly declared in the class definition as a friend of the class.463
 *******
 ******* Even though the prototypes for friend functions appear in the class definition, friends are not member functions.463*******
 
@@ -141,7 +148,7 @@ The destructor itself does not actually release the object‚Äôs memory‚Äîit perfo
 ******* this pointer is usually used to avoid colisions between instance variable and member function parameters with same names.643*******
 
 
-*******In certain cases, only one copy of a variable should be shared by all objects of a class. A static data member is used for these and other reasons. Such a variable represents ‚Äúclasswide‚Äù information, i.e., data that is shared by all instances and is not specific to any one object of the class.469*******
+*******In certain cases, only one copy of a variable should be shared by all objects of a class. A static data member is used for these and other reasons. Such a variable represents ìclasswideî information, i.e., data that is shared by all instances and is not specific to any one object of the class.469*******
 
 ******* SELF LEARNED: const instance variables are either initialized by default OR by constructor WITHIN the initializer list.(THEY CANNOT BE INITIALIZED IN CONSTRUCTOR BODY!!!!)*******
 
@@ -156,13 +163,13 @@ we could write
 std.h(1).he(2).hel(3);
 provided the functions return a this pointer.468***************
 
-******* A class‚Äôs static data members have class scope. A static data member must be initialized exactly once. Fundamental-type static data members are initialized by default to 0. Prior to C++11, a static const data member of int or enum type could be initialized in its declaration in the class definition‚Äîall other static const data members had to be defined and intialized at global namespace scope (i.e., outside the body of the class definition). In C++11, all static const data members can have in-class initializers. If a static data member is an object of a class that provides a default constructor, the static data member need not be initialized because its default constructor will be called. 469-470*******
+******* A classís static data members have class scope. A static data member must be initialized exactly once. Fundamental-type static data members are initialized by default to 0. Prior to C++11, a static const data member of int or enum type could be initialized in its declaration in the class definitionóall other static const data members had to be defined and intialized at global namespace scope (i.e., outside the body of the class definition). In C++11, all static const data members can have in-class initializers. If a static data member is an object of a class that provides a default constructor, the static data member need not be initialized because its default constructor will be called. 469-470*******
 
 ******* Static data members can have their own default constructor.(If no constructor for the class if defined).470*******
 
 
 
-******* A class‚Äôs private  (and protected; Chapter 11)  static members are normally accessed through the class‚Äôs public member functions or friends. A class‚Äôs static members exist even when no objects of that class exist. To access a public static class member when no objects of the class exist, simply prefix the class name and the scope resolution operator (::) to the name of the data member.470*******
+******* A classís private  (and protected; Chapter 11)  static members are normally accessed through the classís public member functions or friends. A classís static members exist even when no objects of that class exist. To access a public static class member when no objects of the class exist, simply prefix the class name and the scope resolution operator (::) to the name of the data member.470*******
 
 
 
@@ -170,7 +177,7 @@ provided the functions return a this pointer.468***************
 
 ******* A static member function is a service of the class, not of a specific object of the class.470******
 
-******* A class‚Äôs static data members and static member functions exist and can be used even if no objects of that class have been instantiated.470*******
+******* A classís static data members and static member functions exist and can be used even if no objects of that class have been instantiated.470*******
 
 
 *******Private members of a base class tho inherited, cannot be directly accessed through a derived class.541*******
@@ -212,3 +219,39 @@ ROM RULE 1 and RULE 2 we understand that it's impossible to perform composition 
 ******* Referencing preprocessor macro within macro*******
 
 ******************SELF LEARNED A friend function needs be declared once again (ASIDE FROM THE FRIEND DECLARATION) before it's usage elsewhere.******************
+
+******** In member function operator overloads, the leftmost (or
+only) operand must be an object (or a reference to an object) of the operator's class. 
+Operator member functions of a specific class are called ( implicitly by the compiler
+only when the left operand of a binary operator is specifically an object of that class, or
+when the single operand of a unary operator is an object of that class.520
+
+Conversion operators are a subset of member operator functions  that should not have a return type. This would cause them to implicitly  set the return type as an obj of the class they are a member  of, leading the 
+
+
+
+
+
+******** In member function operator overloads, the leftmost (or
+only) operand must be an object (or a reference to an object) of the operator's class. 
+Operator member functions of a specific class are called ( implicitly by the compiler
+only when the left operand of a binary operator is specifically an object of that class, or
+when the single operand of a unary operator is an object of that class.520
+
+Conversion operators are a subset of member operator functions  that should not have a return type. This would cause them to implicitly  set the return type as an obj of the class they are a member  of, leading the 
+
+compiler to implicitly  use them to convert and cast for automatic or static casts.523 *******
+
+
+
+
+
+
+
+
+
+
+
+******** Defining overloads for  operators without a specific return type or input as member functions turns them into cast operators which would implicitly be called by the compiler for type checking.522********
+
+255.
